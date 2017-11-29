@@ -55,7 +55,7 @@ public String getVariant()
 
 public String toString()
 {
-	return "Your word is: " + this.word;
+	return "Encapuslated word:\t" + this.word;
 }
 
 public boolean equals(Sequence obj)
@@ -70,7 +70,7 @@ public boolean equals(Sequence obj)
 
 public int hashCode()
 {
-	return (this.word.hashCode());
+	return 37 * (this.word.hashCode());
 
 }
 
