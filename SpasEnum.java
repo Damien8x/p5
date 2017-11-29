@@ -1,20 +1,31 @@
 // Author: Damien Sudol
-// Filename: SpasEnum.cpp
-// Date: 11/08/17
+// Filename: SpasEnum
+// Date: 11/29/17
 // Version: 1.0
 
+// package and imports
 package p5;
 import java.util.*;
 
+// class extendds functionality of SequenceEnum and its hierarchy
+// SpasEnum > SequenceEnum > Inverter > Sequence
+public class SpasEnum extends Inverter{
 
-public class SpasEnum extends SequenceEnum{
-
+// Description: Constructor accepts argument of type String, passes argument to it's 
+// super class and through the class hierarchy, utilizing the methods found in
+// class Sequence.
 public SpasEnum(String word)
-
 {
 super(word);
 }
 
+// Description: Ovverides inherited SequenceEnum.getVariant() method.
+// Based on length of the encapsulated "word" the a concatenation
+// of "word" will be returned through helper function concatenate, or
+// a truncation of "word" will be retuned through helper function
+// truncate.
+// Precondition: ON
+// Postcondition: ON
 public String getVariant()
 {
 
@@ -29,7 +40,12 @@ public String getVariant()
 		 return trunc;
 	}
 }
-	
+
+//Description: helper function for getVariant(), returning a concatenation
+//of encapsulated word and a randomly generated subsequence.
+//precondition:ON 
+//modify: None
+//postcondition:ON
 private String concatenate()
 {
 	String tempWord = word;
@@ -39,6 +55,13 @@ private String concatenate()
 	concat = tempWord+concat;
 	return concat;
 }
+
+
+//Description: helper function for getVariant(), returning a truncated
+//random subsequence of encapsulated word.
+//precondition: ON
+//modify: None
+//postcondition: ON
 private String truncate()
 {
 	String tempWord = word;
