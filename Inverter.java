@@ -18,6 +18,12 @@
 // Inverter IS-A Sequence
 // SequenceEnum, SpasEnum, SeqExtract IS-A Inverter
 //
+// To maintain functionality of Inverter it is designed to be extended by child classes
+// while inheriting functionality of Sequence, maintaining an IS-A relationship with
+// Sequence and passing that functionality, as well as addional functionality, through
+// the methods toString(), hashCode() and equals() to derived classes SequenceEnum,
+// SpasEnum and SeqExtract.
+// 
 //	*State Transitions*
 //
 //Constructor(String) 			       	    -> ON
@@ -55,7 +61,7 @@
 
 
 // package and imports
-package p5;
+//package p5;
 import java.util.*;
 import java.lang.*;
 

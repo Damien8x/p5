@@ -59,7 +59,7 @@
 
 
 // package and imports
-package p5;
+//package p5;
 import java.util.*;
 import java.lang.*;
 
@@ -121,5 +121,25 @@ private String recursiveVariant()
 	wordVariant = str.toString();
 	return wordVariant;
 }
+// Description: Returns true if passed argument is
+// of same type as *this* and if the encapsulated word is
+// *equal* to *this*, using the String class' equals method.
+// Class Invariants: No data member impacted by  method call.
+// Interface Invariants: 
+//	-Object must be in valid state
+//	-Argument may be any Object in any State 
+//	-No limit on method calls
+// Precondition: ON
+// Postcondition: ON 
+public boolean equals(Object obj)
+{
+	if (!(obj instanceof SequenceEnum))
+		return false;
+	else if(((Inverter)obj).word.equals(word))
+		return true;
+	else
+		return false;
+}
+
 
 }

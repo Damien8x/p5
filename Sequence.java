@@ -20,7 +20,7 @@
 //	OBJECT CANNOT BE INSTANTIATED 
 
 // pacakage and imports
-package p5;
+//package p5;
 import java.util.*;
 
 // Abstract Class. Cannot be instantiated
